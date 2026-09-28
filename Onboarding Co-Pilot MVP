@@ -1,0 +1,73 @@
+# Project Phoenix — Synthetic Data Pack
+
+Mock data repository for the Project Phoenix onboarding agent MVP.
+All data is **entirely synthetic** and generated for demonstration purposes only.
+
+---
+
+## Contents
+
+| # | File | Source | Type |
+|---|------|--------|------|
+| 01 | `01_Statement_of_Work.pdf` | SharePoint | PDF |
+| 02 | `02_Solution_Architecture_HLD.pdf` | SharePoint | PDF |
+| 03 | `03_Team_Org_Chart.pdf` | SharePoint | PDF |
+| 04 | `04_Status_Report_Wk11.pdf` | SharePoint | PDF |
+| 05 | `05_Status_Report_Wk8.pdf` | SharePoint | PDF |
+| 06 | `06_ADO_Jira_Board_Export.csv` | Jira / ADO | CSV |
+| 07 | `07_Meeting_Notes_Standup.txt` | Confluence | TXT |
+| 08 | `08_Meeting_Notes_Client_Steering.txt` | Confluence | TXT |
+| 09 | `09_Meeting_Notes_Architecture_Review.txt` | Confluence | TXT |
+| 10 | `10_RAID_Log.csv` | Confluence | CSV |
+| 11 | `11_Email_Scope_Discussion.txt` | Outlook | TXT |
+| 12 | `12_Email_Resource_Escalation.txt` | Outlook | TXT |
+| 13 | `13_Data_Dictionary.csv` | SharePoint | CSV |
+| 14 | `14_API_Spec_Excerpt.json` | SharePoint | JSON |
+| 15 | `15_Testing_Strategy.pdf` | SharePoint | PDF |
+| 16 | `16_Stakeholder_Map.pdf` | SharePoint | PDF |
+| 17 | `17_Change_Management_Plan.pdf` | SharePoint | PDF |
+| 18 | `18_Slack_Export.txt` | Slack | TXT |
+
+---
+
+## Usage in n8n
+
+Each file is fetched via HTTP Request node using its raw GitHub URL.
+
+**URL format:**
+```
+https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/FILENAME
+```
+
+**Example:**
+```
+https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/06_ADO_Jira_Board_Export.csv
+```
+
+For private repos, add a Personal Access Token as a header:
+```
+Authorization: token YOUR_PERSONAL_ACCESS_TOKEN
+```
+
+---
+
+## Folder Structure in n8n
+
+Files are grouped by source platform to simulate real integrations:
+
+```
+SharePoint  → 01, 02, 03, 04, 05, 13, 14, 15, 16, 17
+Jira / ADO  → 06
+Confluence  → 07, 08, 09, 10
+Outlook     → 11, 12
+Slack       → 18
+```
+
+---
+
+## Notes
+
+- All names, dates, ticket numbers, and project details are fictional
+- No real client or company data is included
+- For POC and demo use only
+
