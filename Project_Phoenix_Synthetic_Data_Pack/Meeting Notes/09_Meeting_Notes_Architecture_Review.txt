@@ -1,0 +1,34 @@
+PROJECT PHOENIX - ARCHITECTURE REVIEW (INTERNAL)
+Wednesday 30 July 2025, 11:00-12:00 BST | Teams call
+
+Attendees:
+- Aisha Rahman - Workstream Lead, Conversational AI (chair)
+- Priya Shah - Workstream Lead, Data & Integration
+- Jordan Reyes - Bot Developer
+- Liam O'Connor - Integration Engineer
+- Fatima Al-Sayed - Data Quality Analyst
+- Sarah Kowalski - NLU/Intent Classification Engineer (first 20 min only)
+
+Purpose: root-cause the latency issue found in Week 11 load testing and align on data quality remediation plan.
+
+1. Latency root cause (Jordan / Sarah)
+Load test results: p95 response time 6.2s against a 3.5s target, consistent across three test runs. Sarah walked through the current RAG pipeline - customer message goes to Lex for coarse intent, then for anything outside the top-8 trained intents, the full conversation context plus a knowledge-base retrieval chunk gets sent to Bedrock. The retrieved context chunk has grown over the build (currently averaging ~2,800 tokens) as more FAQ content was added without pruning. Group agreed this is the primary suspect, alongside cold-start latency on the orchestrator Lambda when traffic is bursty.
+
+Agreed actions:
+- Jordan + Sarah: trim retrieval to top-3 most relevant chunks + summarise long chunks before adding to context (PHX-119)
+- Jordan: move orchestrator Lambda to provisioned concurrency for the demo window to eliminate cold starts (PHX-118)
+- Liam: confirmed DynamoDB read latency is not a material contributor (<200ms of the 6.2s), ruled out as root cause
+- Re-test load scenario by end of day Monday 4 Aug, results to Aisha + Maria before Tue standup
+
+Sarah left the call after this item to get back onto demo-prep work with Aisha.
+
+2. Data quality findings (Fatima)
+Fatima presented the reconciliation results: approximately 8% of customerId values in the legacy order-history extract are duplicated, traced to a 2021 merge of two historical loyalty programmes that assigned new IDs without deprecating the old ones. This wasn't visible in the Week 8 sample data (which happened to be drawn from post-merge records only) - it only surfaced once the full 3-year extract was reconciled in Week 10-11, which is why the Week 8 status report shows Data & Integration as Green and the Week 11 report shows Amber.
+
+Agreed actions:
+- Fatima: build a dedup/merge rule keyed on email + original loyalty number, target complete by 8 Aug (PHX-104)
+- Priya: confirm with client data owner whether historical order value should be summed or take-latest on merge
+- Group agreed this does not block the CTO demo (demo uses a clean curated dataset) but is on the critical path for UAT start
+
+3. AOB
+Liam raised that with Alex out and no confirmed backfill, he and Ravi are absorbing pipeline monitoring on top of their existing tickets (PHX-105) - flagged as a risk to sustaining pace post-demo, not just pre-demo. Priya to keep escalating.
