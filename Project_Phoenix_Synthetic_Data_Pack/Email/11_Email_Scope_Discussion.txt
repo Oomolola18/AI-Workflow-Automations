@@ -1,0 +1,61 @@
+EMAIL THREAD: Recommendation Engine ask - scope & timeline
+(Exported from Outlook - names shown as sent)
+
+----------------------------------------------------------------
+From: Derek Voss <derek.voss@lanphilalexmiller.example>
+To: Maria Osei <maria.osei@accenture.example>
+Cc: Rachel Ingram <rachel.ingram@lanphilalexmiller.example>
+Date: Mon 21 Jul 2025, 09:14
+Subject: Product recommendation engine - can we get this in before the demo?
+
+Hi Maria,
+
+Following up from last week's catch-up - I'd really like us to explore adding a product recommendation capability to Phoenix. Nothing fancy to start, even "customers who bought this also bought" would be a huge win for the marketing team, and honestly it would make the CTO demo land a lot better with the wider exec team.
+
+Is this something we could realistically slot in before 13 Aug?
+
+Derek
+
+----------------------------------------------------------------
+From: Maria Osei <maria.osei@accenture.example>
+To: Derek Voss <derek.voss@lanphilalexmiller.example>
+Cc: Rachel Ingram <rachel.ingram@lanphilalexmiller.example>; Tom Whitfield <tom.whitfield@accenture.example>
+Date: Mon 21 Jul 2025, 16:47
+Subject: RE: Product recommendation engine - can we get this in before the demo?
+
+Hi Derek,
+
+Thanks for flagging - appreciate the enthusiasm. To be straight with you: this wasn't in the original SOW scope, and the team's full capacity between now and the 13th is committed to stabilising what we've already built (we found a performance issue in load testing last week that needs to be our priority).
+
+I don't want to commit to something for the demo that we then have to walk back. What I'd suggest: we log a discovery spike now so we're not starting from zero (done - PHX-231), and we scope a proper change request for this to run as a fast-follow after go-live. That protects the demo date and gives the recommendation engine the attention it deserves rather than bolting it on in two weeks.
+
+For now I'd treat this as on hold pending change control, not part of the current sprint.
+
+Maria
+
+----------------------------------------------------------------
+From: Derek Voss <derek.voss@lanphilalexmiller.example>
+To: Maria Osei <maria.osei@accenture.example>
+Cc: Rachel Ingram <rachel.ingram@lanphilalexmiller.example>; Tom Whitfield <tom.whitfield@accenture.example>
+Date: Tue 22 Jul 2025, 08:52
+Subject: RE: RE: Product recommendation engine - can we get this in before the demo?
+
+Maria,
+
+Understood on the performance issue taking priority. I still think it's worth exploring even a very cut-down version - can we at least get a sizing/estimate this week so I can manage expectations upward? The CEO asked about this by name in Monday's exec meeting so I need something more than "on hold" to bring back.
+
+Derek
+
+----------------------------------------------------------------
+From: Tom Whitfield <tom.whitfield@accenture.example>
+To: Derek Voss <derek.voss@lanphilalexmiller.example>
+Cc: Maria Osei <maria.osei@accenture.example>; Rachel Ingram <rachel.ingram@lanphilalexmiller.example>
+Date: Tue 22 Jul 2025, 13:20
+Subject: RE: RE: RE: Product recommendation engine - can we get this in before the demo?
+
+Derek - let's take this off email. I'll set up 30 minutes this week for you, me and Maria to properly scope this as a change request, independent of the go-live timeline. That gives you something concrete for the CEO without putting the 13th at risk. I'll send an invite.
+
+Tom
+
+----------------------------------------------------------------
+[No further replies in this thread as of 1 Aug 2025 export. Meeting referenced in this thread had not yet occurred - see Client Steering notes, 31 Jul, item 4, where Derek pushed for the call to happen "this week, not next."]
