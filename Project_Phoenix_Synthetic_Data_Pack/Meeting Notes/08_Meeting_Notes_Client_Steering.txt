@@ -1,0 +1,33 @@
+PROJECT PHOENIX - MONTHLY CLIENT STEERING COMMITTEE
+Thursday 31 July 2025, 14:00-15:00 BST | LanPhilAlex & Miller HQ, Manchester (hybrid)
+
+Attendees:
+- Rachel Ingram - CTO, LanPhilAlex & Miller (Executive Sponsor)
+- Derek Voss - Head of Marketing, LanPhilAlex & Miller
+- James Okafor - COO, LanPhilAlex & Miller (joined for first 20 min)
+- Tom Whitfield - Engagement Partner, Accenture
+- Maria Osei - Project Lead, Accenture
+- Priya Shah - Workstream Lead, Data & Integration (dialled in for data quality item)
+
+Apologies: none
+
+1. Overall progress (Maria)
+Maria presented Week 11 status: overall Amber, driven by a performance issue found during load testing (intent classification response time) and a data quality issue in the legacy order extract. MVP was delivered end of Week 10 as planned. Maria was clear the team has line of sight to resolving the latency issue before the CTO demo but flagged it as the single biggest risk to a clean demo on 13 August.
+
+Rachel asked directly: "Will we be ready for the 13th?" Maria's response: high confidence in the demo script and underlying functionality, medium confidence specifically on the latency fix landing with enough time to regression test - team is targeting a fix by 11 Aug, which leaves a 2-day buffer.
+
+2. Data quality (Priya)
+Priya explained the ~8% duplicate customerId issue found in the legacy order-history extract, root-caused to a historical merge of two loyalty programmes. Cleansing is in progress (target 8 Aug) and does not block the CTO demo, but does put pressure on the UAT start date. Rachel asked whether this affects data used in the demo - Priya confirmed demo dataset is a curated subset, unaffected.
+
+3. Resourcing (Maria / Tom)
+Maria flagged Alex Turner's leave and the resulting pressure on the Data & Integration workstream. Tom confirmed Accenture is sourcing an interim data engineer but realistically not before Week 13, i.e. after the demo. Client noted for awareness, no action requested of them.
+
+4. Recommendation engine ask (Derek)
+Derek raised, again, that Marketing would like a product recommendation capability included, ideally visible in some form at the CTO demo, noting "the CEO specifically asked about this last week." Maria reiterated this is outside the current SOW scope and would need to go through formal change control before any commitment on timeline or cost; a discovery spike is logged (PHX-231) but not started. Tom supported Maria's position and offered to set up a separate 30-min call with Derek to scope a change request, decoupled from the current go-live. Derek accepted but pushed for that call to happen "this week, not next." ACTION: Tom to set up call with Derek by 4 Aug.
+Note for the record: this is a live scope discussion, not yet resolved - status differs depending who you ask (see also email thread "Scope Discussion - Recommendation Engine Ask").
+
+5. AOB
+James (before leaving early) asked about store pilot list - Marcus Webb to confirm pilot stores by next steering.
+
+Next steering: Thursday 28 August 2025 (post go-live retro slot to be added).
+
