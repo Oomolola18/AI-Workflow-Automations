@@ -1,0 +1,58 @@
+EMAIL THREAD: Alex Turner cover - resourcing risk
+(Exported from Outlook - names shown as sent)
+
+----------------------------------------------------------------
+From: Priya Shah <priya.shah@accenture.example>
+To: Maria Osei <maria.osei@accenture.example>
+Date: Thu 17 Jul 2025, 17:03
+Subject: Need to talk about Alex's leave cover
+
+Maria,
+
+Alex goes on leave from Monday (Wk10) and as of now I have no confirmed backfill. Liam and Ravi can absorb some of his monitoring work short-term but not his data engineering deliverables - specifically the cleansing/reconciliation work is going to slip if it's just the three of us plus Fatima.
+
+Can we raise this with Tom? I'd like a plan in place before Alex actually goes, not after.
+
+Priya
+
+----------------------------------------------------------------
+From: Maria Osei <maria.osei@accenture.example>
+To: Priya Shah <priya.shah@accenture.example>
+Cc: Tom Whitfield <tom.whitfield@accenture.example>
+Date: Fri 18 Jul 2025, 09:41
+Subject: RE: Need to talk about Alex's leave cover
+
+Priya,
+
+Agreed, looping Tom in now. Tom - can we discuss options at Monday's leadership sync? Priya needs either an interim data engineer or a firm view on what we deprioritise on Data & Integration until Alex is back.
+
+Maria
+
+----------------------------------------------------------------
+From: Tom Whitfield <tom.whitfield@accenture.example>
+To: Maria Osei <maria.osei@accenture.example>; Priya Shah <priya.shah@accenture.example>
+Date: Mon 21 Jul 2025, 18:12
+Subject: RE: RE: Need to talk about Alex's leave cover
+
+Both,
+
+Spoke to resourcing. Realistic options:
+1. Pull someone from the Meridian account bench - earliest start would be Wk13 (after the demo), not before.
+2. Backfill internally from within Phoenix - not viable, everyone's already stretched given the latency issue.
+
+I know option 1 doesn't help before the 13th. Priya - can you and the team prioritise ruthlessly for the next 3 weeks? Data cleansing and anything blocking UAT takes priority over anything "nice to have." I'll keep pushing resourcing for an earlier start if anything opens up.
+
+Tom
+
+----------------------------------------------------------------
+From: Priya Shah <priya.shah@accenture.example>
+To: Tom Whitfield <tom.whitfield@accenture.example>; Maria Osei <maria.osei@accenture.example>
+Date: Tue 22 Jul 2025, 08:30
+Subject: RE: RE: RE: Need to talk about Alex's leave cover
+
+Understood, thanks Tom. We'll prioritise the cleansing work (targeting complete 8 Aug) and Liam/Ravi will cover monitoring on an interim basis. Flagging this formally as a risk on the RAID log (R2) so it's visible to the client at steering if needed - I don't think we need to raise it with them directly right now, it's not blocking the demo, just adds pressure into UAT.
+
+Priya
+
+----------------------------------------------------------------
+[Thread ends here as of 1 Aug 2025 export. No confirmed start date for interim cover as of Week 12.]
