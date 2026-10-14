@@ -1,0 +1,16 @@
+Type,ID,Description,Owner,Severity/Priority,Status,Raised Date,Notes
+Risk,R1,Bedrock-backed intent classification p95 latency (6.2s measured) exceeds 3.5s SLA target under peak load; directly impacts live CTO demo credibility,Aisha Rahman,High,Open,2025-07-30,"Root cause suspected: oversized RAG prompt context + cold Lambda starts. Fix in progress, PHX-118/119."
+Risk,R2,Alex Turner (Data Engineer) on leave from Week 10 with no confirmed backfill; reduces Data & Integration capacity ahead of go-live,Priya Shah,High,Open,2025-07-18,"Escalated to Tom Whitfield 24 Jul, see resource escalation email thread. Interim contractor floated, start date not before Wk13."
+Risk,R3,Data quality issues in legacy order-history extract - approx 8% duplicate customerId records found during reconciliation,Fatima Al-Sayed,Medium,Open,2025-07-24,Drove Data & Integration RAG from Green (Wk8) to Amber (Wk11). Cleansing task PHX-104 in progress.
+Risk,R4,Marketing (Derek Voss) requesting Product Recommendation Engine be added to scope ahead of CTO demo; not in original SOW,Maria Osei,Medium,Open,2025-07-21,"Status differs by source: change control 'on hold' per Maria, Jira spike 'Backlog', Wk11 status report says 'under review'. Needs single source of truth."
+Risk,R5,Client procurement delay on AWS Bedrock model access tier upgrade,Tom Whitfield,Low,Closed,2025-06-20,Resolved Week 9 - upgraded tier approved 27 Jun.
+Risk,R6,Contact centre agents may resist agent-assist tool if perceived as monitoring / performance surveillance,Marcus Webb,Medium,Open,2025-07-10,Change readiness survey round 2 in flight.
+Assumption,A1,Client will provide production-representative order volume data for load testing by Week 9,Priya Shah,-,Validated,2025-05-20,"Data received Week 9, later found to have quality issues (see R3)."
+Assumption,A2,Client contact-centre agents have baseline digital literacy sufficient for 2-day training programme,Marcus Webb,-,Validated,2025-05-20,Confirmed via Wk3 skills survey.
+Assumption,A3,AWS Bedrock model quota sufficient for peak Black Friday-equivalent load without further upgrade,Aisha Rahman,-,Unvalidated,2025-07-30,Under review pending load test rerun post latency fix.
+Issue,I1,"Sarah Kowalski temporarily reassigned to CTO demo-script support, reducing bandwidth on intent-classification tuning (PHX-150)",Aisha Rahman,Medium,Open,2025-08-04,"Informal reassignment via Slack, not yet reflected in org chart (PHX-151 raised to update)."
+Issue,I2,Two Wk8 vs Wk11 status reports show conflicting Data & Integration RAG (Green vs Amber) with no linking narrative in either report,Maria Osei,Low,Open,2025-08-01,Root cause documented in R3 and architecture review notes - recommend adding 'change since last report' section to template.
+Issue,I3,Store ops director has not yet confirmed pilot store list for go-live,Marcus Webb,Medium,Open,2025-07-28,Chased twice; response expected by Wk13 steering.
+Dependency,D1,Go-live dependent on client InfoSec sign-off of PII encryption approach,Priya Shah,-,Open,2025-06-01,Review scheduled Week 13.
+Dependency,D2,CTO demo script dependent on latency fix (R1) landing by 11 Aug,Aisha Rahman,-,Open,2025-08-01,Hard dependency - demo is 13 Aug.
+Dependency,D3,UAT start dependent on data cleansing (PHX-104) completing,Fatima Al-Sayed,-,Open,2025-07-28,Targeted for 8 Aug.
