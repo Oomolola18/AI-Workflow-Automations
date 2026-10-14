@@ -1,0 +1,58 @@
+#project-phoenix - channel export (Mon 4 Aug - Tue 5 Aug 2025)
+(Exported for onboarding pack. Times BST.)
+
+============================================================
+Monday 4 August 2025
+============================================================
+
+[08:52] Aisha Rahman: morning all - big week, demo is 13th which is 9 days out from today. anything that could threaten that date, shout early, don't sit on it 🙏
+
+[08:53] Jordan Reyes: reproduced the latency issue again this morning, still averaging ~6.2s p95 in UAT. digging into the prompt trimming approach today
+
+[09:01] Priyanka Nair: UAT script for returns flow done, moved to In Review (PHX-142)
+
+[09:15] Aisha Rahman: @Sarah Kowalski can you help me pull the demo script together this week? Ben's underwater on the returns flow edge cases and I need someone who really knows the intent model to make sure the script doesn't hit any of the weak spots
+
+[09:16] Sarah Kowalski: yeah can do, will context switch off PHX-150 for a few days - Ben can you pick that up if it gets stuck?
+
+[09:17] Ben Foster: sure, ping me when
+
+[09:20] Sarah Kowalski: 🙏 starting on demo script now
+
+[10:03] Liam O'Connor: confirmed - DynamoDB read latency is not the driver on the p95 issue, it's consistently under 200ms. told Jordan
+
+[10:04] Jordan Reyes: 🙏 thanks Liam, rules that out, focusing on the RAG context size then
+
+[11:47] Fatima Al-Sayed: dedup rule for the customerId issue is coming together, should have a first pass by Thursday
+
+[13:32] Ravi Kumar: heads up I'm picking up some of Alex's monitoring alerts this week since there's still no cover confirmed - if anyone sees weird pipeline alerts and I haven't responded, ping me directly, still getting familiar with his dashboards
+
+[14:10] Marcus Webb: change readiness survey round 2 is live, please nudge your client counterparts if you know any store managers, response rate a bit low so far
+
+[16:45] Aisha Rahman: demo script v1 drafted with Sarah, will share for review tomorrow. still contingent on the latency fix landing, that's the real dependency
+
+============================================================
+Tuesday 5 August 2025
+============================================================
+
+[09:02] Jordan Reyes: prompt trimming is looking promising - test run this morning came back at 3.9s p95, down from 6.2s. not under target yet but big improvement
+
+[09:03] Aisha Rahman: 🎉 nice. what's left to close the gap to 3.5s?
+
+[09:05] Jordan Reyes: moving the orchestrator lambda to provisioned concurrency should knock off the cold-start piece, doing that today. hoping for sub-3.5 by Thursday's re-test
+
+[09:40] Sarah Kowalski: demo script v1 is with Aisha for review, back on PHX-150 intent tuning this afternoon if nothing else comes up
+
+[10:12] Priya Shah: reminder for the Data & Integration folks - cleansing work (PHX-104) takes priority over anything not blocking UAT or the demo, per Tom's steer last week
+
+[11:05] Emma Clarke: training deck v2 is with Marcus for review, aiming to circulate to store managers by end of week
+
+[13:20] Derek Voss: (external, added temporarily for this thread) hi all - following up on getting a time locked in for the rec-engine scoping call, keen to get this moving this week if possible
+
+[13:41] Tom Whitfield: @Derek Voss sending an invite for Thursday, will keep it to a scoping conversation, separate from the 13th
+
+[15:02] Maria Osei: status report for Wk11 is out to steering distribution, flagging latency (R1) as the number one risk to the demo date, everything else is manageable in the background
+
+[16:30] Jordan Reyes: provisioned concurrency change deployed to UAT, will have fresh load test numbers tomorrow AM
+
+[16:58] Aisha Rahman: great work today team. remember - PHX-151 to update the org chart for Sarah's temporary demo-prep support, don't want that causing confusion for anyone new joining this week
