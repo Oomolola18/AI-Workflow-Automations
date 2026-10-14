@@ -1,0 +1,52 @@
+Key,Summary,Type,Status,Assignee,Priority,Workstream,Sprint,Created,Updated
+PHX-118,Investigate Bedrock p95 latency regression under load,Bug,In Progress,Jordan Reyes,Highest,Conversational AI,Sprint 6,2025-07-29,2025-08-05
+PHX-119,Reduce prompt size for Bedrock intent fallback path,Task,In Progress,Sarah Kowalski,High,Conversational AI,Sprint 6,2025-07-30,2025-08-04
+PHX-120,Add response caching for repeat order-status queries,Story,To Do,Jordan Reyes,High,Conversational AI,Sprint 6,2025-07-30,2025-07-31
+PHX-121,Define rate limiting policy for peak load (Black Friday equivalent),Task,Backlog,Priya Shah,Medium,Data & Integration,Unscheduled,2025-07-30,2025-07-30
+PHX-231,Product Recommendation Engine - discovery spike,Spike,Backlog,Priya Shah,Low,Data & Integration,Unscheduled,2025-07-22,2025-07-22
+PHX-104,Cleanse duplicate customerId records in legacy order extract,Bug,In Progress,Fatima Al-Sayed,High,Data & Integration,Sprint 6,2025-07-28,2025-08-04
+PHX-105,Reassign data pipeline monitoring tasks (interim cover),Task,Blocked,Liam O'Connor,Medium,Data & Integration,Sprint 6,2025-07-25,2025-08-01
+PHX-142,Finalise UAT script for returns flow,Task,In Review,Priyanka Nair,Medium,Conversational AI,Sprint 6,2025-07-27,2025-08-03
+PHX-143,Demo script v1 - CTO walkthrough,Task,In Progress,Aisha Rahman,High,Conversational AI,Sprint 6,2025-08-01,2025-08-05
+PHX-150,Intent classification accuracy tuning - returns vs refunds,Story,In Progress,Sarah Kowalski,High,Conversational AI,Sprint 6,2025-07-26,2025-08-04
+PHX-151,Org chart update - reflect temporary demo-prep support,Task,To Do,Maria Osei,Low,Change & Adoption,Sprint 6,2025-08-05,2025-08-05
+PHX-200,Build Lex slot-filling for order lookup,Story,Done,Sarah Kowalski,Medium,Conversational AI,Sprint 3,2025-06-23,2025-06-28
+PHX-201,Wire agent-desktop handoff button to Connect,Story,To Do,Aisha Rahman,Low,Conversational AI,Sprint 4,2025-06-16,2025-06-19
+PHX-202,Unit tests for orchestrator Lambda,Task,In Review,Jordan Reyes,Highest,Conversational AI,Sprint 6,2025-07-14,2025-08-01
+PHX-203,Fix duplicate greeting bug on channel switch,Bug,In Progress,Jordan Reyes,Medium,Conversational AI,Sprint 6,2025-07-28,2025-08-03
+PHX-204,Load test harness for peak-hour simulation,Task,Done,Ben Foster,High,Conversational AI,Sprint 3,2025-06-23,2025-07-28
+PHX-205,Voice IVR fallback menu copy,Task,To Do,Priyanka Nair,Medium,Conversational AI,Sprint 5,2025-07-28,2025-08-05
+PHX-206,Sentiment flag for escalation trigger,Story,In Progress,Sarah Kowalski,Highest,Conversational AI,Sprint 5,2025-07-07,2025-07-25
+PHX-207,Refactor Lex bot alias deployment pipeline,Task,Backlog,Aisha Rahman,High,Conversational AI,Sprint 4,2025-07-21,2025-07-23
+PHX-208,DynamoDB Customer360 table schema v2,Task,To Do,Ravi Kumar,High,Data & Integration,Sprint 5,2025-07-28,2025-08-05
+PHX-209,API Gateway throttling config for peak load,Task,Backlog,Priya Shah,Medium,Data & Integration,Sprint 4,2025-06-23,2025-07-05
+PHX-210,Nightly batch job for order status sync,Story,Backlog,Ravi Kumar,Highest,Data & Integration,Sprint 4,2025-07-14,2025-07-20
+PHX-211,Fix stale inventory data in product lookup,Bug,In Progress,Fatima Al-Sayed,Low,Data & Integration,Sprint 4,2025-06-30,2025-07-18
+PHX-212,OpenSearch index for knowledge base RAG,Task,Done,Ravi Kumar,High,Data & Integration,Sprint 6,2025-07-28,2025-08-05
+PHX-213,PII field encryption audit,Task,To Do,Ravi Kumar,High,Data & Integration,Sprint 6,2025-07-14,2025-07-21
+PHX-214,Data retention policy implementation,Story,Backlog,Priya Shah,Low,Data & Integration,Sprint 4,2025-06-23,2025-06-28
+PHX-215,Fix broken foreign key on Orders table,Bug,In Review,Alex Turner,Medium,Data & Integration,Sprint 6,2025-07-21,2025-08-04
+PHX-216,Backfill missing loyalty tier field,Task,In Review,Ravi Kumar,High,Data & Integration,Sprint 3,2025-07-14,2025-07-17
+PHX-217,Draft agent training deck v2,Task,In Progress,Emma Clarke,High,Change & Adoption,Sprint 3,2025-07-28,2025-08-05
+PHX-218,Schedule UAT sessions with store ops team,Task,To Do,Noah Bennett,Low,Change & Adoption,Sprint 3,2025-07-14,2025-08-01
+PHX-219,Comms email - go-live announcement draft,Task,To Do,Marcus Webb,Medium,Change & Adoption,Sprint 3,2025-07-28,2025-08-05
+PHX-220,Change readiness survey - round 2,Story,To Do,Noah Bennett,High,Change & Adoption,Sprint 4,2025-07-07,2025-07-16
+PHX-221,Floor walker briefing pack,Task,To Do,Marcus Webb,Medium,Change & Adoption,Sprint 4,2025-07-28,2025-08-05
+PHX-222,Post go-live support rota,Task,Backlog,Emma Clarke,High,Change & Adoption,Sprint 5,2025-07-14,2025-07-15
+PHX-223,Update FAQ knowledge base articles,Task,Done,Priyanka Nair,Highest,Conversational AI,Sprint 3,2025-06-30,2025-07-08
+PHX-224,Security review - Connect call recording storage,Task,Blocked,Fatima Al-Sayed,Highest,Data & Integration,Sprint 4,2025-06-16,2025-06-19
+PHX-225,Fix incorrect refund status label in widget,Bug,Backlog,Jordan Reyes,Low,Conversational AI,Sprint 6,2025-07-14,2025-07-23
+PHX-226,Set up CloudWatch alarms for Lambda errors,Task,In Review,Fatima Al-Sayed,High,Data & Integration,Sprint 5,2025-07-21,2025-08-03
+PHX-227,Agent desktop UI - conversation history pane,Story,In Review,Priyanka Nair,Low,Conversational AI,Sprint 3,2025-06-16,2025-06-24
+PHX-228,Localise widget copy for accessibility review,Task,Done,Noah Bennett,High,Change & Adoption,Sprint 3,2025-07-14,2025-07-15
+PHX-229,Automate nightly Bedrock cost report,Task,In Review,Liam O'Connor,Highest,Data & Integration,Sprint 4,2025-06-16,2025-06-19
+PHX-230,Fix timezone bug in order timestamp display,Bug,Backlog,Ben Foster,Low,Conversational AI,Sprint 6,2025-06-23,2025-06-28
+PHX-240,Draft rollback plan for go-live,Task,In Progress,Fatima Al-Sayed,Low,Data & Integration,Sprint 6,2025-06-23,2025-06-27
+PHX-232,Contact centre shrinkage model for post go-live,Task,To Do,Noah Bennett,Low,Change & Adoption,Sprint 3,2025-07-07,2025-07-11
+PHX-233,Penetration test remediation - auth token scope,Bug,Backlog,Priya Shah,Highest,Data & Integration,Sprint 6,2025-06-23,2025-06-30
+PHX-234,Write runbook for Lex bot redeploy,Task,To Do,Jordan Reyes,High,Conversational AI,Sprint 3,2025-06-30,2025-07-08
+PHX-235,Store manager briefing session - Manchester pilot store,Task,In Review,Noah Bennett,Highest,Change & Adoption,Sprint 3,2025-06-16,2025-07-04
+PHX-236,Fix flaky integration test for handoff flow,Bug,In Review,Sarah Kowalski,High,Conversational AI,Sprint 4,2025-07-07,2025-07-23
+PHX-237,Define go-live exit criteria checklist,Task,Done,Priya Shah,High,Data & Integration,Sprint 5,2025-07-07,2025-07-20
+PHX-238,Add multi-language greeting support,Story,Blocked,Priyanka Nair,Low,Conversational AI,Sprint 4,2025-07-21,2025-08-05
+PHX-239,Investigate Connect call recording S3 lifecycle cost,Task,Blocked,Fatima Al-Sayed,High,Data & Integration,Sprint 3,2025-06-16,2025-07-04
