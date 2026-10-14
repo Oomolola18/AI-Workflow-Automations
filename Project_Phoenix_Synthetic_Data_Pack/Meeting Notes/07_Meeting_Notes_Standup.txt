@@ -1,0 +1,42 @@
+PROJECT PHOENIX - DAILY STANDUP NOTES
+Tuesday 5 August 2025, 09:15 BST | 15 min | Teams call
+Attendees: Aisha Rahman (chair), Sarah Kowalski, Jordan Reyes, Ben Foster, Priyanka Nair, Liam O'Connor, Ravi Kumar
+
+Format: yesterday / today / blockers, ConvAI + Data & Integration only (Change & Adoption has separate Tue/Thu standup)
+
+Aisha:
+- Y: Pulled together first draft of CTO demo script with Sarah.
+- T: Reviewing latency fix approach with Jordan, prepping demo run-through for Thu.
+- Blocker: none
+
+Sarah:
+- Y: Demo script draft (with Aisha) + started on prompt-size reduction spike.
+- T: Continuing prompt-size work, will hand off intent-tuning ticket (PHX-150) to Ben for a couple of days if demo prep runs long.
+- Blocker: stretched between two things this week, flagged to Aisha.
+
+Jordan:
+- Y: Reproduced the p95 latency issue consistently in UAT env - averaging 6.1-6.4s under simulated peak, vs 3.5s target.
+- T: Testing whether trimming RAG context window + switching to streamed responses gets us under target. PHX-118/119.
+- Blocker: need confirmation from Priya's side that DynamoDB read latency isn't contributing - waiting on her.
+
+Ben:
+- Y: Returns flow conversation design, finished happy path.
+- T: Picking up PHX-150 (intent tuning) if Sarah hands it off, otherwise continuing edge cases on returns flow.
+- Blocker: none
+
+Priyanka:
+- Y: UAT script for returns flow, about 80% done.
+- T: Finish UAT script, start test data prep for load re-test.
+- Blocker: none
+
+Liam:
+- Y: Investigating DynamoDB read latency contribution to overall response time - looks marginal (<200ms), not the main driver.
+- T: Will confirm formally to Jordan today.
+- Blocker: none
+
+Ravi:
+- Y: Backend support for order-status endpoint, minor bug fix on timezone display.
+- T: Picking up some of Alex's monitoring tasks on an interim basis (PHX-105) since we still don't have a backfill confirmed.
+- Blocker: no formal cover for Alex yet - Priya chasing with Maria/Tom.
+
+Aisha (wrap-up): Reminder - CTO demo is 13 Aug (8 days away). Latency fix is the single biggest thing standing between us and a clean demo. Everyone flag anything that threatens that date immediately, don't wait for standup.
