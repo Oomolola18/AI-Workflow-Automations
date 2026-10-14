@@ -1,0 +1,97 @@
+{
+  "info": {
+    "title": "Project Phoenix - Chatbot Service API (Excerpt)",
+    "version": "0.9.0-draft",
+    "description": "Excerpt of key endpoints for the Phoenix conversational AI service. Full spec maintained in the platform team's internal repo; this excerpt covers the endpoints most relevant to onboarding.",
+    "note": "DRAFT - endpoint paths and error codes subject to change before go-live sign-off."
+  },
+  "servers": [
+    {
+      "url": "https://api.phoenix.internal.accenture-lm-project.example/v1",
+      "description": "Non-production (UAT) environment"
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/conversations",
+      "method": "POST",
+      "summary": "Start a new conversation session",
+      "requestBody": {
+        "customerId": "string (optional)",
+        "channel": "enum[webchat, voice]"
+      },
+      "responses": {
+        "201": {
+          "conversationId": "string",
+          "createdAt": "ISO8601"
+        },
+        "400": "Invalid channel"
+      }
+    },
+    {
+      "path": "/conversations/{conversationId}/messages",
+      "method": "POST",
+      "summary": "Send a customer message and receive the bot's response",
+      "requestBody": {
+        "text": "string",
+        "locale": "string (default en-GB)"
+      },
+      "responses": {
+        "200": {
+          "intent": "string",
+          "confidenceScore": "float",
+          "responseText": "string",
+          "escalate": "boolean"
+        },
+        "504": "Model timeout - see PHX-118 latency investigation"
+      }
+    },
+    {
+      "path": "/orders/{orderId}",
+      "method": "GET",
+      "summary": "Retrieve order status and details",
+      "responses": {
+        "200": {
+          "orderId": "string",
+          "status": "string",
+          "dispatchDate": "date",
+          "returnEligible": "boolean"
+        },
+        "404": "Order not found"
+      }
+    },
+    {
+      "path": "/customers/{customerId}",
+      "method": "GET",
+      "summary": "Retrieve customer profile for personalisation",
+      "responses": {
+        "200": {
+          "customerId": "string",
+          "loyaltyTier": "string",
+          "preferredChannel": "string"
+        },
+        "404": "Customer not found"
+      }
+    },
+    {
+      "path": "/handoff",
+      "method": "POST",
+      "summary": "Escalate an in-progress conversation to a live contact-centre agent",
+      "requestBody": {
+        "conversationId": "string",
+        "reason": "enum[low_confidence, negative_sentiment, customer_request]"
+      },
+      "responses": {
+        "202": {
+          "queueId": "string",
+          "estimatedWaitSeconds": "integer"
+        },
+        "503": "No agents available"
+      }
+    }
+  ],
+  "openItems": [
+    "Recommendation engine endpoint (proposed /recommendations) NOT yet in scope - see RAID log R4 and scope discussion email thread",
+    "Rate limiting policy for peak load (Black Friday equivalent) still under design - see PHX-120, PHX-121"
+  ]
+}
