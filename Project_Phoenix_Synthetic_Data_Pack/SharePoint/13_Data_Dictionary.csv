@@ -1,0 +1,27 @@
+Entity,Field,Type,Description,Source System,Owner
+Customer,customerId,String (UUID),Unique customer identifier,DynamoDB - Customer360,Liam O'Connor
+Customer,email,String,"Customer email address, used for order lookup fallback",DynamoDB - Customer360,Liam O'Connor
+Customer,loyaltyTier,Enum (Bronze/Silver/Gold),"Loyalty programme tier, drives response tone/offers",DynamoDB - Customer360,Fatima Al-Sayed
+Customer,preferredChannel,Enum (chat/voice/email),Customer's last-used contact channel,DynamoDB - Customer360,Fatima Al-Sayed
+Customer,consentMarketing,Boolean,Marketing comms consent flag,DynamoDB - Customer360,Fatima Al-Sayed
+Customer,createdDate,ISO 8601 Date,Account creation date,Legacy CRM export,Fatima Al-Sayed
+Order,orderId,String (UUID),Unique order identifier,DynamoDB - Orders,Liam O'Connor
+Order,customerId,String (UUID),Foreign key to Customer table,DynamoDB - Orders,Liam O'Connor
+Order,status,Enum (placed/dispatched/delivered/returned/cancelled),Current order lifecycle status,DynamoDB - Orders,Ravi Kumar
+Order,storeId,String,Fulfilling store or 'ECOM' for e-commerce,Legacy POS export,Ravi Kumar
+Order,totalValue,Decimal,Order total in GBP,DynamoDB - Orders,Ravi Kumar
+Order,returnEligible,Boolean,Whether order is within return window,Computed - Lambda,Ravi Kumar
+Order,dispatchDate,ISO 8601 Date,Date order dispatched from warehouse,Legacy WMS export,Ravi Kumar
+Conversation,conversationId,String (UUID),Unique chat/voice session identifier,DynamoDB - ConversationLog,Jordan Reyes
+Conversation,channel,Enum (webchat/voice),Channel conversation originated on,DynamoDB - ConversationLog,Jordan Reyes
+Conversation,intent,String,Top-level intent classified by Lex/Bedrock,DynamoDB - ConversationLog,Sarah Kowalski
+Conversation,confidenceScore,Float 0-1,Model confidence for classified intent,DynamoDB - ConversationLog,Sarah Kowalski
+Conversation,escalatedToHuman,Boolean,Whether conversation was handed off to a live agent,DynamoDB - ConversationLog,Jordan Reyes
+Conversation,sentimentFlag,Enum (positive/neutral/negative),Detected customer sentiment,DynamoDB - ConversationLog,Sarah Kowalski
+Product,sku,String,Stock keeping unit identifier,Legacy PIM export,Priya Shah
+Product,name,String,Product display name,Legacy PIM export,Priya Shah
+Product,stockLevel,Integer,"Current stock count, store or warehouse",Legacy WMS export,Ravi Kumar
+Product,category,String,Merchandising category,Legacy PIM export,Priya Shah
+Agent,agentId,String,Contact centre agent identifier,Legacy WFM export,Priya Shah
+Agent,team,String,Contact centre team/queue,Legacy WFM export,Priya Shah
+Agent,skillTags,String (comma-separated),Agent skill routing tags,Legacy WFM export,Priya Shah
